@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Tester</RootNamespace>
     <AssemblyName>Tester</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -43,6 +43,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,6 +53,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -73,24 +75,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CellWorld\CellWorld.csproj">
-      <Project>{1B929137-8919-47B4-8ECB-E93E0E1783B6}</Project>
-      <Name>CellWorld</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DigitalBrain\DigitalNeuralNetwork.csproj">
-      <Project>{AF664F21-84E4-470D-A82D-8DE9D364C8A2}</Project>
-      <Name>DigitalNeuralNetwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Monster\Monster.csproj">
-      <Project>{C54E4C9F-DF70-4EE3-A4FF-59B31D33F1B0}</Project>
-      <Name>Monster</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleMonster\SimpleMonster.csproj">
-      <Project>{DCAB214D-E443-4A0E-ADD8-2A31F373979F}</Project>
-      <Name>SimpleMonster</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -109,6 +93,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CellWorld\CellWorld.csproj">
+      <Project>{1b929137-8919-47b4-8ecb-e93e0e1783b6}</Project>
+      <Name>CellWorld</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DigitalBrain\DigitalNeuralNetwork.csproj">
+      <Project>{af664f21-84e4-470d-a82d-8de9d364c8a2}</Project>
+      <Name>DigitalNeuralNetwork</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Monster\Monster.csproj">
+      <Project>{c54e4c9f-df70-4ee3-a4ff-59b31d33f1b0}</Project>
+      <Name>Monster</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
