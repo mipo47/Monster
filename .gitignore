@@ -35,6 +35,7 @@ Backup/*
 *.psess
 *.vsp
 *.rar
+.vs/
 
 Health/
 HealthData/

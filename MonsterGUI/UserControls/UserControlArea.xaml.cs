@@ -23,22 +23,24 @@ namespace MonsterGUI.Controls
 	/// </summary>
 	public partial class UserControlArea : UserControl
 	{
+        static string ProjectPath = System.IO.Path.Combine(Environment.CurrentDirectory, "../..");
+
 		static Uri[] meals = new Uri[] {
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\apple.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\corn.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\nuts.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\carrot.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\cheese.jpg")
+			new Uri(ProjectPath + @"\Images\apple.jpg"),
+			new Uri(ProjectPath + @"\Images\corn.jpg"),
+			new Uri(ProjectPath + @"\Images\nuts.jpg"),
+			new Uri(ProjectPath + @"\Images\carrot.jpg"),
+			new Uri(ProjectPath + @"\Images\cheese.jpg")
 		};
 
 		static Uri[] monsters = new Uri[] {
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster1.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster2.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster3.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster4.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster5.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster6.jpg"),
-			new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\hamster7.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster1.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster2.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster3.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster4.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster5.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster6.jpg"),
+			new Uri(ProjectPath + @"\Images\hamster7.jpg"),
 		};
 
 		CellArea area;
@@ -230,7 +232,7 @@ namespace MonsterGUI.Controls
 					break;
 
 				case ContentType.Wall:
-					bi = new BitmapImage(new Uri(@"G:\Projects\exa\Monster\MonsterGUI\Images\wall.jpg"));
+					bi = new BitmapImage(new Uri(ProjectPath + @"\Images\wall.jpg"));
 					rectangle.Fill = new ImageBrush(bi);
 					break;
 			}
