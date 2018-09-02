@@ -1,0 +1,22 @@
+﻿<Window x:Class="MonsterGUI.WindowArea"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:MonsterGUI.Controls"
+    Title="Super hamsters"  Width="500" Height="300" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Controls:UserControlArea x:Name="MainArea" Grid.Column="1" Margin="6,0,6,0" />
+
+        <StackPanel>
+		    <Button Height="23" Name="buttonStart" VerticalAlignment="Top" Click="buttonStart_Click">Start</Button>
+		    <CheckBox Height="16" Margin="0,5,0,0" Name="checkBoxEvolution" VerticalAlignment="Top" Checked="checkBoxEvolution_Checked" Unchecked="checkBoxEvolution_Checked">Evolution</CheckBox>
+		    <Slider Height="22" Margin="0,5,0,0" Name="sliderEvolution" VerticalAlignment="Top" Value="60" Minimum="40" Maximum="70" ToolTip="Evolution speed" />
+		    <Button Height="23" Margin="0,10,0,0" Name="buttonLoad" VerticalAlignment="Top" Click="buttonLoad_Click">Load</Button>
+            <Slider Name="sliderMutation" Margin="0,5,0,0" SmallChange="1" Minimum="1" Maximum="150" ToolTip="Mutation amount" ValueChanged="sliderMutation_ValueChanged"></Slider>
+        </StackPanel>
+    </Grid>
+</Window>
